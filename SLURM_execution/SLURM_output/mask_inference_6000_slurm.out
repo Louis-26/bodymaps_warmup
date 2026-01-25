@@ -1,0 +1,15 @@
+--- [OK] Environment 'suprem' already exists. Skipping creation. ---
+--- [OK] PyTorch is already installed. ---
+159 159
+Use pretrained weights
+test len 2
+/brtx/605-nvme2/ylu174/research/bodymaps_warmup/AbdomenAtlasDemoPredict/BDMAP_00000031
+/brtx/605-nvme2/ylu174/research/bodymaps_warmup/AbdomenAtlasDemo/BDMAP_00000031/ct.nii.gz
+torch.Size([1, 1, 301, 276, 651])
+['BDMAP_00000031']
+[1/2] Saved BDMAP_00000031
+/brtx/605-nvme2/ylu174/research/bodymaps_warmup/AbdomenAtlasDemoPredict/BDMAP_00000006
+/brtx/605-nvme2/ylu174/research/bodymaps_warmup/AbdomenAtlasDemo/BDMAP_00000006/ct.nii.gz
+torch.Size([1, 1, 267, 258, 651])
+['BDMAP_00000006']
+[2/2] Saved BDMAP_00000006
