@@ -3,7 +3,7 @@ if [ ! -f ./AbdomenAtlasDemo ]; then
     cd $(git rev-parse --show-toplevel)
     wget http://www.cs.jhu.edu/~zongwei/dataset/AbdomenAtlasDemo.tar.gz
     tar -xzvf AbdomenAtlasDemo.tar.gz
-    rm -rf AbdomenAtlasDemo.tar.gz
+    rm -rf AbdomenAtlasDemo.tar.gz ._AbdomenAtlasDemo
 fi
 
 # check whether `pretrained_checkpoints/swin_unetr_totalsegmentator_vertebrae.pth` exists
