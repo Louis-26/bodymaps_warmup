@@ -14,3 +14,9 @@
  25-01-2026 11:57:03:482 [pid=27106 tid=27106] NOTICE  cufio-drv:830 running in compatible mode
  25-01-2026 12:01:42:127 [pid=27248 tid=27248] NOTICE  cufio-drv:830 running in compatible mode
  25-01-2026 12:20:38:917 [pid=27504 tid=27504] NOTICE  cufio-drv:830 running in compatible mode
+ 29-01-2026 07:30:41:680 [pid=71460 tid=71460] ERROR  0:140 unable to load,  liburcu-bp.so.6 
+
+ 29-01-2026 07:30:41:680 [pid=71460 tid=71460] ERROR  0:140 unable to load,  liburcu-bp.so.1 
+
+ 29-01-2026 07:30:41:927 [pid=71460 tid=71460] WARN   0:169 failed to open /proc/driver/nvidia-fs/devcount  error: No such file or directory
+ 29-01-2026 07:30:41:927 [pid=71460 tid=71460] NOTICE  cufio-drv:830 running in compatible mode

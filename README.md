@@ -44,6 +44,9 @@ srun -p brtx6-dev -N 1 -n 1 -c 8 --gres=gpu:10 --mem=64G -t 2:00:00 --pty bash
 ```
 
 ## step 3: create conda environment
+
+Tested Device Environment:
+A100✅
 ```bash 
 conda create -n suprem python=3.9 -y
 conda activate suprem
@@ -52,8 +55,17 @@ python -m pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==
 python -m pip install monai[all]==0.9.0
 python -m pip install -r requirements.txt
 ```
+
 Tested Device Environment:
-Quadro RTX A6000(24GB VRAM) x10✅
+RTX PRO 6000✅
+```bash 
+conda create -n suprem python=3.10 -y
+conda activate suprem
+cd $(git rev-parse --show-toplevel)/SuPreM
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+python -m pip install monai[all]==0.9.0
+pip install --no-cache-dir -r requirements_new.txt
+```
 
 ## step 4: configure inference parameters and run
 check
