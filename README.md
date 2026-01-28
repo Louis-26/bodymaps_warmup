@@ -47,7 +47,7 @@ srun -p brtx6-dev -N 1 -n 1 -c 8 --gres=gpu:10 --mem=64G -t 2:00:00 --pty bash
 ```bash 
 conda create -n suprem python=3.9 -y
 conda activate suprem
-cd SuPreM/
+cd $(git rev-parse --show-toplevel)/SuPreM
 python -m pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
 python -m pip install monai[all]==0.9.0
 python -m pip install -r requirements.txt
@@ -60,12 +60,12 @@ check
 ls -lh "/brtx/605-nvme2/ylu174/research/bodymaps_warmup/SuPreM/direct_inference/pretrained_checkpoints/swin_unetr_totalsegmentator_vertebrae.pth"
 ```bash
 cd $(git rev-parse --show-toplevel)
+CURRENT_PATH=$(pwd)
 # change to the exact path(absolute path)
-datarootpath=/brtx/605-nvme2/ylu174/research/bodymaps_warmup/AbdomenAtlasDemo
+datarootpath="$CURRENT_PATH/AbdomenAtlasDemo"
 
-pretrainpath=/brtx/605-nvme2/ylu174/research/bodymaps_warmup/SuPreM/direct_inference/pretrained_checkpoints/swin_unetr_totalsegmentator_vertebrae.pth
-savepath=/brtx/605-nvme2/ylu174/research/bodymaps_warmup/AbdomenAtlasDemoPredict
-
+pretrainpath="$CURRENT_PATH/SuPreM/direct_inference/pretrained_checkpoints/swin_unetr_totalsegmentator_vertebrae.pth"
+savepath="$CURRENT_PATH/AbdomenAtlasDemoPredict"
 
 cd SuPreM/direct_inference/
 python -W ignore inference.py --save_dir $savepath --checkpoint $pretrainpath --data_root_path $datarootpath --customize 

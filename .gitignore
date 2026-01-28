@@ -2,4 +2,5 @@
 /AbdomenAtlasDemo/
 /SuPreM/direct_inference/pretrained_checkpoints/swin_unetr_totalsegmentator_vertebrae.pth
 /current_machine.md/
-/.idea
+/.idea/
+/dataset/
