@@ -16,6 +16,9 @@ fi
 # add to .gitignore, if not already added
 cd $(git rev-parse --show-toplevel)
 
+# delete all .DS_Store files and ._ files
+find . \( -name ".DS_Store" -o -name "._*" \) -type f -delete
+
 IGNORES=(
     "/git_script/"
     "/AbdomenAtlasDemo/"
