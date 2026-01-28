@@ -1,14 +1,15 @@
 # check whether `AbdomenAtlasDemo` exists
+cd $(git rev-parse --show-toplevel)
 if [ ! -f ./AbdomenAtlasDemo ]; then
-    cd $(git rev-parse --show-toplevel)
     wget http://www.cs.jhu.edu/~zongwei/dataset/AbdomenAtlasDemo.tar.gz
     tar -xzvf AbdomenAtlasDemo.tar.gz
     rm -rf AbdomenAtlasDemo.tar.gz ._AbdomenAtlasDemo
 fi
 
 # check whether `pretrained_checkpoints/swin_unetr_totalsegmentator_vertebrae.pth` exists
+cd $(git rev-parse --show-toplevel)
 if [ ! -f ./pretrained_checkpoints/swin_unetr_totalsegmentator_vertebrae.pth ]; then
-	cd $(git rev-parse --show-toplevel)/direct_inference/pretrained_checkpoints/
+	cd SuPreM/direct_inference/pretrained_checkpoints/
 	wget http://www.cs.jhu.edu/~zongwei/dataset/swin_unetr_totalsegmentator_vertebrae.pth
 fi
 
